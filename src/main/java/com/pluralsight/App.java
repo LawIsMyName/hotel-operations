@@ -70,5 +70,22 @@ public class App {
 
         room.cleanRoom();
         System.out.println("After Cleaning: " + room.isAvailable());
+
+        Employee employee = new Employee(
+                103, "Alex Johnson", "Front Desk", 0, 20.00);
+
+        System.out.println("\n---- EMPLOYEE TIME CLOCK ----");
+
+        employee.punchIn(9);
+        employee.punchOut(17);
+
+        System.out.println("Hours Worked: " + employee.getHoursWorked());
+
+        employee.punchIn(10);
+        employee.punchOut(14);
+
+        System.out.println("Updated Hours: " + employee.getHoursWorked());
+
+        System.out.printf("Total Pay: $%.2f%n", employee.getTotalPay());
     }
 }

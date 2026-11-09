@@ -7,6 +7,7 @@ public class Employee {
     private String department;
     private double hoursWorked;
     private double payRate;
+    private int startTime;
 
     public Employee(int employeeId, String name,
                     String department, double hoursWorked,
@@ -64,6 +65,18 @@ public class Employee {
         double overtimePay = getOvertimeHours() * payRate * 1.5;
 
         return regularPay + overtimePay;
+    }
+
+    public void punchIn(int time) {
+
+        startTime = time;
+    }
+
+    public void punchOut(int time) {
+
+        double hours = time - startTime;
+
+        hoursWorked = hoursWorked + hours;
     }
 
 }
