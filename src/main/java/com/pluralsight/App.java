@@ -26,8 +26,11 @@ public class App {
         System.out.printf("Reservation Total: $%.2f%n",
                 reservation.getReservationTotal());
 
-        Employee employee1 = new Employee(101, "John", "Smith", 20, 20.00);
-        Employee employee2 = new Employee(102, "Jane", "Doe", 45, 20.00);
+        Employee employee1 = new Employee(
+                101, "John Smith", "Front Desk", 20.00, 20);
+
+        Employee employee2 = new Employee(
+                102, "Jane Doe", "Housekeeping", 20.00, 45);
 
         System.out.println("\n---- EMPLOYEE TEST ----");
 

@@ -3,18 +3,18 @@ package com.pluralsight;
 public class Employee {
 
     private int employeeId;
-    private String firstName;
-    private String lastName;
+    private String name;
+    private String department;
     private double hoursWorked;
     private double payRate;
 
-    public Employee(int employeeId, String firstName,
-                    String lastName, double hoursWorked,
+    public Employee(int employeeId, String name,
+                    String department, double hoursWorked,
                     double payRate) {
 
         this.employeeId = employeeId;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.name = name;
+        this.department = department;
         this.hoursWorked = hoursWorked;
         this.payRate = payRate;
     }
@@ -23,12 +23,12 @@ public class Employee {
         return employeeId;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getDepartment() {
+        return department;
     }
 
     public double getHoursWorked() {
