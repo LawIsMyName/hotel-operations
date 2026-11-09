@@ -60,8 +60,15 @@ public class App {
 
         System.out.println("\n---- ROOM TEST ----");
 
-        room.checkRoom(true);
-        room.checkRoom(false);
+        System.out.println("Initially Available: " + room.isAvailable());
+
+        room.checkIn();
+        System.out.println("After Check-In: " + room.isAvailable());
+
+        room.checkOut();
+        System.out.println("After Check-Out: " + room.isAvailable());
+
         room.cleanRoom();
+        System.out.println("After Cleaning: " + room.isAvailable());
     }
 }

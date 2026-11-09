@@ -34,23 +34,22 @@ public class Room {
         return !occupied && !dirty;
     }
 
-    public void checkRoom(boolean checkOccupancy) {
+    public void checkIn() {
 
-        if (checkOccupancy) {
-            if (isAvailable()) {
-                occupied = true;
-                dirty = true;
-                System.out.println("Guest checked in successfully.");
-            } else {
-                System.out.println("Room is not available.");
-            }
+        if (isAvailable()) {
+            occupied = true;
+            dirty = true;
         } else {
-            if (occupied) {
-                occupied = false;
-                System.out.println("Guest checked out successfully.");
-            } else {
-                System.out.println("Room is not occupied.");
-            }
+            System.out.println("Room is not available for check-in.");
+        }
+    }
+
+    public void checkOut() {
+
+        if (occupied) {
+            occupied = false;
+        } else {
+            System.out.println("Room is not occupied.");
         }
     }
 
