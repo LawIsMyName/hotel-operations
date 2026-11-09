@@ -55,6 +55,23 @@ public class Reservation {
         return price;
     }
 
+    public double getWeekendSurcharge() {
+
+        double basePrice = 0;
+
+        if (roomType.equalsIgnoreCase("king")) {
+            basePrice = 139.00;
+        } else if (roomType.equalsIgnoreCase("double")) {
+            basePrice = 124.00;
+        }
+
+        if (weekend) {
+            return basePrice * 0.10;
+        }
+
+        return 0;
+    }
+
     public double getReservationTotal() {
         return getPrice() * numberOfNights;
     }
