@@ -23,5 +23,19 @@ public class App {
         System.out.printf("Reservation Total: $%.2f%n",
                 reservation.getReservationTotal());
 
+        Employee employee1 = new Employee(101, "John", "Smith", 20, 20.00);
+        Employee employee2 = new Employee(102, "Jane", "Doe", 45, 20.00);
+
+        System.out.println("\n---- EMPLOYEE TEST ----");
+
+        System.out.println("Employee 1");
+        System.out.println("Regular Hours: " + employee1.getRegularHours());
+        System.out.println("Overtime Hours: " + employee1.getOvertimeHours());
+        System.out.printf("Total Pay: $%.2f%n", employee1.getTotalPay());
+
+        System.out.println("\nEmployee 2");
+        System.out.println("Regular Hours: " + employee2.getRegularHours());
+        System.out.println("Overtime Hours: " + employee2.getOvertimeHours());
+        System.out.printf("Total Pay: $%.2f%n", employee2.getTotalPay());
     }
 }
