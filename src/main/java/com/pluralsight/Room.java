@@ -34,9 +34,9 @@ public class Room {
         return !occupied && !dirty;
     }
 
-    public void checkRoom(boolean checkingIn) {
+    public void checkRoom(boolean checkOccupancy) {
 
-        if (checkingIn) {
+        if (checkOccupancy) {
             if (isAvailable()) {
                 occupied = true;
                 dirty = true;

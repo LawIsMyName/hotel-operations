@@ -55,5 +55,13 @@ public class App {
         guest.setPhoneNumber("815-555-5678");
 
         System.out.println("Updated Phone: " + guest.getPhoneNumber());
+
+        Room room = new Room(2, 124.00, false, false);
+
+        System.out.println("\n---- ROOM TEST ----");
+
+        room.checkRoom(true);
+        room.checkRoom(false);
+        room.cleanRoom();
     }
 }
