@@ -40,5 +40,17 @@ public class App {
         System.out.println("Regular Hours: " + employee2.getRegularHours());
         System.out.println("Overtime Hours: " + employee2.getOvertimeHours());
         System.out.printf("Total Pay: $%.2f%n", employee2.getTotalPay());
+
+        Guest guest = new Guest(101, "John", "Smith", "815-555-1234");
+
+        System.out.println("\n---- GUEST TEST ----");
+
+        System.out.println("Guest ID: " + guest.getGuestId());
+        System.out.println("Guest Name: " + guest.getFullName());
+        System.out.println("Phone Number: " + guest.getPhoneNumber());
+
+        guest.setPhoneNumber("815-555-5678");
+
+        System.out.println("Updated Phone: " + guest.getPhoneNumber());
     }
 }
