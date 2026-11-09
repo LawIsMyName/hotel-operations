@@ -20,6 +20,9 @@ public class App {
         System.out.printf("Nightly Price: $%.2f%n",
                 reservation.getPrice());
 
+        System.out.printf("Weekend Surcharge: $%.2f%n",
+                reservation.getWeekendSurcharge());
+
         System.out.printf("Reservation Total: $%.2f%n",
                 reservation.getReservationTotal());
 
