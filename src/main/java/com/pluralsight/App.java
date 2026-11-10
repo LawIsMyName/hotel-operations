@@ -27,10 +27,10 @@ public class App {
                 reservation.getReservationTotal());
 
         Employee employee1 = new Employee(
-                101, "John Smith", "Front Desk", 20.00, 20);
+                101, "John Smith", "Front Desk", 20, 20.00);
 
         Employee employee2 = new Employee(
-                102, "Jane Doe", "Housekeeping", 20.00, 45);
+                102, "Jane Doe", "Housekeeping", 45,20.00 );
 
         System.out.println("\n---- EMPLOYEE TEST ----");
 
