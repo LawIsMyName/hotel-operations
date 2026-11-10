@@ -17,20 +17,15 @@ public class App {
 
         System.out.println("\n---- RESERVATION TEST ----");
 
-        System.out.printf("Nightly Price: $%.2f%n",
-                reservation.getPrice());
+        System.out.printf("Nightly Price: $%.2f%n", reservation.getPrice());
 
-        System.out.printf("Weekend Surcharge: $%.2f%n",
-                reservation.getWeekendSurcharge());
+        System.out.printf("Weekend Surcharge: $%.2f%n", reservation.getWeekendSurcharge());
 
-        System.out.printf("Reservation Total: $%.2f%n",
-                reservation.getReservationTotal());
+        System.out.printf("Reservation Total: $%.2f%n", reservation.getReservationTotal());
 
-        Employee employee1 = new Employee(
-                101, "John Smith", "Front Desk", 20, 20.00);
+        Employee employee1 = new Employee(101, "John Smith", "Front Desk", 20, 20.00);
 
-        Employee employee2 = new Employee(
-                102, "Jane Doe", "Housekeeping", 45,20.00 );
+        Employee employee2 = new Employee(102, "Jane Doe", "Housekeeping", 45, 20.00);
 
         System.out.println("\n---- EMPLOYEE TEST ----");
 
@@ -71,8 +66,7 @@ public class App {
         room.cleanRoom();
         System.out.println("After Cleaning: " + room.isAvailable());
 
-        Employee employee = new Employee(
-                103, "Alex Johnson", "Front Desk", 0, 20.00);
+        Employee employee = new Employee(103, "Alex Johnson", "Front Desk", 0, 20.00);
 
         System.out.println("\n---- EMPLOYEE TIME CLOCK ----");
 

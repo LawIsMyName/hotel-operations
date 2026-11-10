@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import java.time.LocalDateTime;
 public class Employee {
 
     private int employeeId;
@@ -7,7 +8,7 @@ public class Employee {
     private String department;
     private double hoursWorked;
     private double payRate;
-    private int startTime;
+    private double startTime;
     private boolean isPunchedIn = false;
 
     public Employee(int employeeId, String name,
