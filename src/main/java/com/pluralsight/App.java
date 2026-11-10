@@ -92,6 +92,15 @@ public class App {
         System.out.println("Hours Worked: " + employee3.getHoursWorked());
 
         System.out.printf("Total Pay: $%.2f%n", employee3.getTotalPay());
+
+        System.out.println("\n---- HOTEL BOOKING TEST ----");
+
+        Hotel hotel = new Hotel("Lakeside Inn", 2, 10);
+
+        System.out.println("Book 2 Suites: " + hotel.bookRoom(2, true));
+        System.out.println("Book 1 More Suite: " + hotel.bookRoom(1, true));
+        System.out.println("Available Suites: " + hotel.getAvailableSuites());
+        System.out.println("Available Rooms: " + hotel.getAvailableRooms());
     }
 
 
