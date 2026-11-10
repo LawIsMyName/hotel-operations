@@ -34,5 +34,9 @@ public class Hotel {
     public int getAvailableRooms() {
         return numberOfRooms - bookedBasicRooms;
     }
+
+    public boolean bookRoom(int roomCount, boolean suite) {
+   
+    }
 }
 
