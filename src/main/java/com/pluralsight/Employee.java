@@ -90,6 +90,14 @@ public class Employee {
         hoursWorked = hoursWorked + hours;
     }
 
+    public void punchOut() {
+        LocalDateTime now = LocalDateTime.now();
+
+        double time = now.getHour() + now.getMinute() / 60.0;
+
+        hoursWorked = hoursWorked + (time - startTime);
+    }
+
     public void punchTimeCard(int time) {
 
         if (!isPunchedIn) {
