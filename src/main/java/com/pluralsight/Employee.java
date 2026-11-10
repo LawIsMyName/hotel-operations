@@ -75,6 +75,14 @@ public class Employee {
         startTime = time;
     }
 
+    public void punchIn() {
+        LocalDateTime now = LocalDateTime.now();
+
+        double time = now.getHour() + now.getMinute() / 60.0;
+
+        startTime = time;
+    }
+
     public void punchOut(int time) {
 
         double hours = time - startTime;
@@ -92,7 +100,5 @@ public class Employee {
             isPunchedIn = false;
         }
     }
-
-
 
 }
