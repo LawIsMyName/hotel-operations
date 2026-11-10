@@ -81,6 +81,17 @@ public class App {
         System.out.println("Updated Hours: " + employee.getHoursWorked());
 
         System.out.printf("Total Pay: $%.2f%n", employee.getTotalPay());
+
+        System.out.println("\n---- EMPLOYEE CURRENT TIME TEST ----");
+
+        Employee employee3 = new Employee(104, "Taylor Brown", "Front Desk", 0, 20.00);
+
+        employee3.punchIn();
+        employee3.punchOut();
+
+        System.out.println("Hours Worked: " + employee3.getHoursWorked());
+
+        System.out.printf("Total Pay: $%.2f%n", employee3.getTotalPay());
     }
 
 
