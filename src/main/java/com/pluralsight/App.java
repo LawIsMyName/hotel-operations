@@ -103,5 +103,4 @@ public class App {
         System.out.println("Available Rooms: " + hotel.getAvailableRooms());
     }
 
-
 }

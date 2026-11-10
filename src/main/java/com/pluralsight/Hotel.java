@@ -8,8 +8,7 @@ public class Hotel {
     private int bookedSuites;
     private int bookedBasicRooms;
 
-    public Hotel(String name, int numberOfSuites, int numberOfRooms,
-                int bookedSuites, int bookedBasicRooms) {
+    public Hotel(String name, int numberOfSuites, int numberOfRooms, int bookedSuites, int bookedBasicRooms) {
 
         this.name = name;
         this.numberOfSuites = numberOfSuites;
