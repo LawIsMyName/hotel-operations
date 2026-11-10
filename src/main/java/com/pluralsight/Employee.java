@@ -8,6 +8,7 @@ public class Employee {
     private double hoursWorked;
     private double payRate;
     private int startTime;
+    private boolean isPunchedIn = false;
 
     public Employee(int employeeId, String name,
                     String department, double hoursWorked,
@@ -18,6 +19,7 @@ public class Employee {
         this.department = department;
         this.hoursWorked = hoursWorked;
         this.payRate = payRate;
+
     }
 
     public int getEmployeeId() {
@@ -78,5 +80,9 @@ public class Employee {
 
         hoursWorked = hoursWorked + hours;
     }
+
+
+
+
 
 }
