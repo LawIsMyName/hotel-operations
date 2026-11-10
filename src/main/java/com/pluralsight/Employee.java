@@ -81,7 +81,16 @@ public class Employee {
         hoursWorked = hoursWorked + hours;
     }
 
+    public void punchTimeCard(int time) {
 
+        if (!isPunchedIn) {
+            punchIn(time);
+            isPunchedIn = true;
+        } else {
+            punchOut(time);
+            isPunchedIn = false;
+        }
+    }
 
 
 

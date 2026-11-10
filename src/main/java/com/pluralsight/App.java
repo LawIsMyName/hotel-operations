@@ -76,8 +76,8 @@ public class App {
 
         System.out.println("\n---- EMPLOYEE TIME CLOCK ----");
 
-        employee.punchIn(9);
-        employee.punchOut(17);
+        employee.punchTimeCard(9);
+        employee.punchTimeCard(17);
 
         System.out.println("Hours Worked: " + employee.getHoursWorked());
 
