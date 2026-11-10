@@ -36,7 +36,22 @@ public class Hotel {
     }
 
     public boolean bookRoom(int roomCount, boolean suite) {
-   
+        if (suite) {
+            if (roomCount > getAvailableSuites()) {
+                return false;
+            }
+
+            bookedSuites = bookedSuites + roomCount;
+            return true;
+
+        } else {
+            if (roomCount > getAvailableRooms()) {
+                return false;
+            }
+
+            bookedBasicRooms = bookedBasicRooms + roomCount;
+            return true;
+        }
     }
 }
 
