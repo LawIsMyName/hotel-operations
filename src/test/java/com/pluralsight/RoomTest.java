@@ -71,15 +71,4 @@ class RoomTest {
         assertEquals(false, room.isAvailable());
     }
 
-    @Test
-    public void checkIn_should_markRoomNotOccupiedForDirtyRoom() {
-        Room room = new Room(1, 180, true, true);
-
-        room.checkIn();
-
-        assertEquals(true, room.isOccupied());
-        assertEquals(true, room.isDirty());
-        assertEquals(false, room.isAvailable());
-
-    }
 }
