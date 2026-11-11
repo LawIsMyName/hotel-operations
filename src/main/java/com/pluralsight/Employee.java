@@ -12,9 +12,7 @@ public class Employee {
     private double startTime;
     private boolean isPunchedIn = false;
 
-    public Employee(int employeeId, String name,
-                    String department, double hoursWorked,
-                    double payRate) {
+    public Employee(int employeeId, String name, String department, double hoursWorked, double payRate) {
 
         this.employeeId = employeeId;
         this.name = name;

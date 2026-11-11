@@ -39,10 +39,32 @@ class RoomTest {
     }
 
     @Test
-    public void checkIn_should_makeAvailableRoomOccupiedAndDirty() {
-        Room room = new Room(1, 180, false, false);
+    public void checkIn_should_notOccupyDirtyRoom() {
+        Room room = new Room(1, 180, false, true);
 
         room.checkIn();
+
+        assertEquals(false, room.isOccupied());
+        assertEquals(true, room.isDirty());
+        assertEquals(false, room.isAvailable());
+    }
+
+    @Test
+    public void checkIn_should_notChangeAlreadyOccupiedRoom() {
+        Room room = new Room(2, 124.00, true, false);
+
+        room.checkIn();
+
+        assertEquals(true, room.isOccupied());
+        assertEquals(false, room.isDirty());
+        assertEquals(false, room.isAvailable());
+    }
+
+    @Test
+    public void cleanRoom_should_notCleanOccupiedRoom() {
+        Room room = new Room(1, 180, true, true);
+
+        room.cleanRoom();
 
         assertEquals(true, room.isOccupied());
         assertEquals(true, room.isDirty());
@@ -50,24 +72,14 @@ class RoomTest {
     }
 
     @Test
-    public void checkOut_should_leaveRoomEmptyDirtyAndUnavailable() {
+    public void checkIn_should_markRoomNotOccupiedForDirtyRoom() {
         Room room = new Room(1, 180, true, true);
 
-        room.checkOut();
+        room.checkIn();
 
-        assertEquals(false, room.isOccupied());
+        assertEquals(true, room.isOccupied());
         assertEquals(true, room.isDirty());
         assertEquals(false, room.isAvailable());
-    }
 
-    @Test
-    public void cleanRoom_should_makeDirtyRoomCleanAndAvailable() {
-        Room room = new Room(1, 180, false, true);
-
-        room.cleanRoom();
-
-        assertEquals(false, room.isOccupied());
-        assertEquals(false, room.isDirty());
-        assertEquals(true, room.isAvailable());
     }
 }
